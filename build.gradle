@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea'
+
+defaultTasks 'clean', 'build'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Visual Illusions Repository'
+        url = 'http://repo.visualillusionsent.net/repositories/repository/public/'
+    }
+    maven {
+        name = 'mcstats.org releases'
+        url = 'http://repo.mcstats.org/content/repositories/releases/'
+    }
+    maven {
+        url "https://libraries.minecraft.net"
+    }
+}
+
+dependencies {
+    compile 'net.canarymod:CanaryLib:1.2.1-SNAPSHOT'
+}
